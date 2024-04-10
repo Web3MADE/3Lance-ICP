@@ -1,0 +1,15 @@
+{
+  "canisters": {
+    "3lance_frontend_canister": {
+      "entrypoint": "out/index.html",
+      "dependencies": ["3lance_backend_canister"],
+      "source": ["out"],
+      "type": "assets"
+    },
+    "3lance_backend_canister": {
+      "main": "app/3lance_backend_canister/main.mo",
+      "type": "motoko"
+    }
+  },
+  "output_env_file": ".env"
+}
