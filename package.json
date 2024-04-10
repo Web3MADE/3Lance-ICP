@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dfinity/agent": "^1.2.0",
+    "@dfinity/auth-client": "^1.2.0",
+    "@dfinity/candid": "^1.2.0",
+    "@dfinity/identity": "^1.2.0",
+    "@dfinity/principal": "^1.2.0",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.15",
