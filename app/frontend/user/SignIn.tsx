@@ -1,7 +1,7 @@
 "use client";
 import { Box, Button } from "@mui/material";
 import Image from "next/image";
-
+// TODO: add user auth via Internet Identity
 export default function SignIn() {
   function handleLogin() {}
 
