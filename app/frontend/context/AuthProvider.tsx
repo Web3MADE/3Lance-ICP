@@ -1,7 +1,14 @@
 "use client";
 import { createContext, useContext } from "react";
 import { useAuthClient } from "../hooks/useAuthClient";
-const AuthContext = createContext({});
+const AuthContext = createContext({
+  isAuthenticated: false,
+  identity: undefined,
+  principal: undefined,
+  whoamiActor: undefined,
+  login: () => {},
+  logout: () => {},
+});
 export const AuthProvider = ({
   children,
 }: Readonly<{
@@ -9,7 +16,9 @@ export const AuthProvider = ({
 }>) => {
   const auth = useAuthClient();
 
-  return <AuthContext.Provider value={auth}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={auth as any}>{children}</AuthContext.Provider>
+  );
 };
 
 export const useAuth = () => useContext(AuthContext);
