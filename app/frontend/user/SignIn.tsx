@@ -1,9 +1,10 @@
 "use client";
 import { Box, Button } from "@mui/material";
 import Image from "next/image";
+import { useAuth } from "../context/AuthProvider";
 // TODO: add user auth via Internet Identity
 export default function SignIn() {
-  function handleLogin() {}
+  const { login } = useAuth();
 
   return (
     <Box sx={{ display: "flex", height: "100vh" }}>
@@ -24,7 +25,7 @@ export default function SignIn() {
             alignItems: "center",
           }}
         >
-          <Button variant="contained" onClick={handleLogin}>
+          <Button variant="contained" onClick={login}>
             Log in
           </Button>
         </Box>
