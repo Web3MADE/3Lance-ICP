@@ -4,11 +4,13 @@
       "entrypoint": "out/index.html",
       "dependencies": ["3lance_backend_canister"],
       "source": ["out"],
-      "type": "assets"
+      "type": "assets",
+      "candid": "app/3lance_frontend_canister/3lance_frontend_canister.did"
     },
     "3lance_backend_canister": {
       "main": "app/3lance_backend_canister/main.mo",
-      "type": "motoko"
+      "type": "motoko",
+      "candid": "app/3lance_backend_canister/3lance_backend_canister.did"
     }
   },
   "output_env_file": ".env"
