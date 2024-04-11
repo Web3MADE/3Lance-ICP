@@ -1,16 +1,16 @@
 {
   "canisters": {
-    "3lance_frontend_canister": {
+    "frontend_canister": {
       "entrypoint": "out/index.html",
-      "dependencies": ["3lance_backend_canister"],
+      "dependencies": ["backend_canister"],
       "source": ["out"],
       "type": "assets",
-      "candid": "app/3lance_frontend_canister/3lance_frontend_canister.did"
+      "candid": "app/frontend_canister/frontend_canister.did"
     },
-    "3lance_backend_canister": {
-      "main": "app/3lance_backend_canister/main.mo",
+    "backend_canister": {
+      "main": "app/backend_canister/main.mo",
       "type": "motoko",
-      "candid": "app/3lance_backend_canister/3lance_backend_canister.did"
+      "candid": "app/backend_canister/backend_canister.did"
     }
   },
   "output_env_file": ".env"

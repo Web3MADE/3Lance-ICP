@@ -1,11 +1,9 @@
+"use client";
 import { AuthClient } from "@dfinity/auth-client";
 
 import { Actor, Identity } from "@dfinity/agent";
 import { useEffect, useState } from "react";
-import {
-  canisterId,
-  createActor,
-} from "../../declarations/3lance_frontend_canister";
+import { canisterId, createActor } from "../../declarations/frontend_canister";
 import { defaultOptions } from "../config/AuthConfig";
 
 export const useAuthClient = (options = defaultOptions) => {
